@@ -1,0 +1,74 @@
+//Day 3 - Exercise 11 - Text2number
+
+String str = "";
+String output = "";
+println("Please enter some text: ");
+str = System.console().readLine();
+int position = 0;
+int decimalPlaces = 0;
+String leftside = "";
+String rightside = "";
+String alltogether = "";
+int num = 0;
+String toprint = "";
+String toprinttemp = "";
+
+
+//first create a string of the input without any commas or decimal dots.
+//then turn this string into an int and divide by 2
+//then use a method to put the decimal place in its correct place
+//if number with no dots/commas is odd, when divide by 2 will end in 0.5, so add 5 to string at end before printing
+
+while(position< str.length()){
+	if(str.substring(position,position+1).equals(",")){	
+		position++;
+	}
+	else{
+		output = output+ str.substring(position,position+1);
+		position++;
+	}
+}
+
+println(output);
+println("len: " + output.length());
+
+for(int x = 0;x<output.length();x++){
+	if (output.substring(x,x+1).equals(".")){
+		decimalPlaces = (output.length()-1)-x;
+		leftside = output.substring(0,x);
+		rightside = output.substring(x+1,output.length());
+		alltogether = leftside+rightside;
+		break;
+	}
+
+
+
+}
+
+println(decimalPlaces);
+println(alltogether);
+
+num = Integer.parseInt(alltogether);
+
+
+
+
+if (num%2 == 0){
+	num = num/2;
+	toprinttemp = String.valueOf(num);
+	println(num);
+	toprint = toprinttemp.substring(0,toprinttemp.length()-(decimalPlaces))+"." +toprinttemp.substring(toprinttemp.length()-(decimalPlaces),toprinttemp.length());
+}
+else{
+	num = num/2;
+	toprinttemp = String.valueOf(num);
+	println(num);
+	toprint = toprinttemp.substring(0,toprinttemp.length()-(decimalPlaces))+"." +toprinttemp.substring(toprinttemp.length()-(decimalPlaces),toprinttemp.length())+"5";
+}
+println("answer: " + toprint);
+
+
+	
+	
+
+

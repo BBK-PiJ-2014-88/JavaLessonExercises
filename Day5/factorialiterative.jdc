@@ -1,0 +1,12 @@
+//Day 5 - Exercise 2.1 - Factorial Iterative
+
+println(factorialIterative(8));
+
+int factorialIterative(int num){
+	int total = 1;
+	while(num>1){
+		total = total*num;
+		num --;
+	}
+	return total;
+}

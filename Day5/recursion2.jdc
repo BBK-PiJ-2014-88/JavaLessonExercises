@@ -1,0 +1,10 @@
+//Day 5 - Exercise 2 
+
+println(buggyMethod(7));
+
+String buggyMethod(int n) {
+if (n <= 0) {
+return "";
+}
+return n + " " + buggyMethod(n - 2);
+}

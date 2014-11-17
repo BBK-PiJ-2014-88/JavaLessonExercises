@@ -1,0 +1,56 @@
+//Day 3 - Exercise 12 - Distance point-to-point
+
+//User inputs 3 points. Program outputs which 2 points are closest.
+//The smaller the gap between x and y coordinates means the points are closer.
+
+Point point1 = new Point();
+Point point2 = new Point();
+Point point3 = new Point();
+
+println("Please enter the x coordinate of the first point: ");
+point1.x = Double.parseDouble(System.console().readLine());
+println("Please enter the y coordinate of the first point: ");
+point1.y = Double.parseDouble(System.console().readLine());
+println("Please enter the x coordinate of the second point: ");
+point2.x = Double.parseDouble(System.console().readLine());
+println("Please enter the y coordinate of the second point: ");
+point2.y = Double.parseDouble(System.console().readLine());
+println("Please enter the x coordinate of the third point: ");
+point3.x = Double.parseDouble(System.console().readLine());
+println("Please enter the y coordinate of the third point: ");
+point3.y = Double.parseDouble(System.console().readLine());
+
+println("First point = (" + point1.x + "," + point1.y + ")");
+println("Second point = (" + point2.x + "," + point2.y + ")");
+println("Third point = (" + point3.x + "," + point3.y + ")");
+
+double distance1and2;
+double distance1and3;
+double distance2and3;
+
+distance1and2 = Math.abs(point1.x-point2.x)+ Math.abs(point1.y-point2.y);
+distance1and3 = Math.abs(point1.x-point3.x)+ Math.abs(point1.y-point3.y);
+distance2and3 = Math.abs(point2.x-point3.x)+ Math.abs(point2.y-point3.y);
+
+if (distance1and2 < distance1and3){
+	if (distance1and2 < distance2and3){
+		println("Points1 and Point2 are closest together");
+	}
+	else{
+		println("Points2 and Point3 are closest together"); //as d1and2 less than d1and3 so d2and3 must be smaller than d1and3 if smaller than d1and2
+	}
+}
+
+else{
+	if(distance1and3<distance2and3){
+		println("Points 1 and Point 3 are closest together");
+	}
+	else{
+		println("Points2 and 3 are closest together");
+	}	
+}
+
+class Point{
+	double x;
+	double y;
+}

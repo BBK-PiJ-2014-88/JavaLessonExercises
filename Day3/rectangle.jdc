@@ -1,0 +1,11 @@
+//Day 3 - Exercise 13 - Rectangle 
+
+class Rectangle{
+	Point upLeft;
+	Point downRight;
+}
+
+class Point{
+	double x;
+	double y;
+}

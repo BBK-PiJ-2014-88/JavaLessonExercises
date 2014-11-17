@@ -1,0 +1,2 @@
+listOfMarks checkingListOfMarks = new listOfMarks();
+checkingListOfMarks.readMarks();

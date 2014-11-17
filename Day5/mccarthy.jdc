@@ -1,0 +1,13 @@
+//Day 5 - Exercise 1D McCarthy's 91 function
+
+
+println(mcCarthy91(2));
+
+int mcCarthy91(int n) {
+	println(n);
+	if (n > 100) {
+		return n - 10;
+	} else {
+		return mcCarthy91(mcCarthy91(n+11));
+	}
+}

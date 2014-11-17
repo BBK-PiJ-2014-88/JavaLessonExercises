@@ -1,0 +1,29 @@
+//Day 1 - Exercise 18 - Find pi
+
+println("Please enter a number: ");
+int k = Integer.parseInt(System.console().readLine());
+double total = 0;    //adding an int to a double gives a double
+int num = -1;
+double topHalf = 0;
+double bottomHalf = 0;
+
+while(num<k){
+	num++;
+	bottomHalf = (2*num)+1;
+	if(num==0 || num%2==0){
+		topHalf = 4;
+		println(topHalf);
+	}
+	else{
+		topHalf = -4;
+		println(topHalf);
+	}
+
+	println(bottomHalf);	
+	total = total + (topHalf/bottomHalf);
+	println(total);
+	
+}
+
+println("pi == " + total);
+

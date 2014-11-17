@@ -1,0 +1,19 @@
+//Day 5 - Exercise 5 - Power
+
+Mathematics myMath = new Mathematics();
+println(myMath.pow(2,8));
+
+class Mathematics{
+	int pow(int base, int exponent){
+		if (exponent == 0){
+			return 1;
+		}
+		else if (exponent == 1){
+			return base;
+		}
+		else{
+			return base*(pow(base, exponent - 1));
+		}
+		
+	}
+}

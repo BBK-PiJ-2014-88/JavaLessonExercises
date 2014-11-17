@@ -1,0 +1,60 @@
+//Day 1 - Exercise 15 Guess my number
+
+
+double numberToGuess = Math.abs(1000 * Math.random());
+int numberOfGuesses = 0;
+int guess = 0;
+int correct= 0;
+correct = doubleToInt(numberToGuess);
+
+println("Try to guess my number!");
+
+
+while(true){
+	numberOfGuesses = numberOfGuesses +1;
+	println("Please tell me a number: ");
+	guess = Integer.parseInt(System.console().readLine());
+	if(guess==correct){
+		println("Correct!");
+		println("You needed " + numberOfGuesses + " guesses");
+		break;
+	}else if(guess > correct){
+		println("No! My number is lower.");
+	}else if(guess < correct){
+		println("No! My number is higher.");
+	}			
+}
+
+//need a method to round the random number
+//otherwise the users guess will never guess correctly as 
+//random number has many decimal places
+
+
+
+
+
+int doubleToInt(double num){
+	String str = String.valueOf(num);
+	String newS = "";
+	int newInt = 0;
+	int length1 = str.length();
+	int x = 0;
+	while (x<length1){
+		if(str.substring(x,x+1).equals(".")){
+		newS = str.substring(0,x);
+		break;
+		}
+		x++;
+	}
+			
+	newInt = Integer.parseInt(newS);
+	return newInt;
+
+}
+
+//wasted a lot of time trying to get this to work because there was an extra redundant 
+//curly brace, be careful in future
+//also within method don't define same variable twice
+//e.g. String s = "";
+//String s = "watermelon";
+//just define it one time.

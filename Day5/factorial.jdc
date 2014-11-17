@@ -1,0 +1,15 @@
+//Day 5 - Exercise 2.1 - Factorial
+
+println(factorialRecursive(8));
+
+
+int factorialRecursive(int num){
+	if (num ==1){
+		return 1;
+	}
+	else{
+		return num*(factorialRecursive(num-1));
+	}
+}
+
+//works fine until 12, then stops working properly after 13 as too many digits.

@@ -1,0 +1,65 @@
+//Day 1 - Exercise 16 Rock Paper Scissors
+int scoreA = 0;
+int scoreB = 0;
+String input = "";
+String inputB ="";
+String scoreCheck = "";
+
+
+while(wonByThree(scoreA,scoreB)==false){
+	input ="";
+	inputB="";
+	scoreCheck = "";
+	println("PlayerA please enter choice: ");
+	input = System.console().readLine();
+	println("PlayerB please enter choice: ");
+	inputB = System.console().readLine();
+	scoreCheck = input + inputB;
+	if(scoreCheck.equals("PR")){
+		scoreA++;
+		println(scoreCheck + " PlayerA gets the point!");
+		println("Current score = PlayerA: " + scoreA + " PlayerB: " + scoreB);
+	}
+	else if(scoreCheck.equals("PS")){
+			scoreB++;
+			println(scoreCheck + " PlayerB gets the point!");
+			println("Current score = PlayerA: " + scoreA + " PlayerB: " + scoreB);
+	}
+	else if(scoreCheck.equals("RP")){
+				scoreB++;
+				println(scoreCheck + " PlayerB gets the point!");
+				println("Current score = PlayerA: " + scoreA + " PlayerB: " + scoreB);
+	}
+	else if(scoreCheck.equals("RS")){
+				scoreA++;
+				println(scoreCheck + " PlayerA gets the point!");
+				println("Current score = PlayerA: " + scoreA + " PlayerB: " + scoreB);
+	}
+	else if(scoreCheck.equals("SP")){
+				scoreA++;
+				println(scoreCheck + " PlayerA gets the point!");
+				println("Current score = PlayerA: " + scoreA + " PlayerB: " + scoreB);
+	}
+	else if(scoreCheck.equals("SR")){
+				scoreB++;
+				println(scoreCheck + " PlayerB gets the point!");
+				println("Current score = PlayerA: " + scoreA + " PlayerB: " + scoreB);
+	}
+}
+
+
+//method to see if one player's score is greater than the other
+
+boolean wonByThree (int score1, int score2){
+	if(score1-score2>=3){	
+		println("Player A has won!");
+		return true;
+	}
+	else if(score2-score1>=3){
+		println("Player B has won!");
+		return true;
+	}
+	else{
+		return false;
+	}
+}

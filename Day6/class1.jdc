@@ -1,0 +1,20 @@
+Point point = new Point(1,1);
+println ("The point is now at " + point.x + "," + point.y);
+Point remotePoint = new Point(10,20);
+point.moveTo(remotePoint);
+println ("The point is now at " + point.x + "," + point.y);
+
+
+
+class Point {
+	double x;
+	double y;
+	Point(double x, double y) {
+		this.x = x;
+		this.y = y;
+	}
+	double moveTo(Point remote) {
+		this.x = remote.x;
+		this.y = remote.y;
+	}
+}

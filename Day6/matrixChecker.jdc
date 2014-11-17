@@ -1,0 +1,13 @@
+//Day 6 - Exercise 3 - Matrix Checker
+
+Matrix matrixTester = new Matrix(4,4);
+matrixTester.prettyPrint();  
+println();
+matrixTester.setElement(1,1,4);
+matrixTester.prettyPrint();   
+println();
+matrixTester.setRow(2,"3,4,5,6");
+matrixTester.prettyPrint();
+println();
+matrixTester.setColumn(3,"2,2,2,2");
+matrixTester.prettyPrint();

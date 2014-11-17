@@ -1,0 +1,13 @@
+//Day 5 - Exercise 2.2 - Fibonacci
+//Calculates the nth element of the Fibonacci sequence 
+
+println(fibonacciRecursive(27));
+
+int fibonacciRecursive(int num){
+	if (num < 3){
+		return 1;
+	}
+	else{
+		return fibonacciRecursive(num-1) + fibonacciRecursive(num-2);
+	}
+}

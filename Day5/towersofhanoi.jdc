@@ -1,0 +1,15 @@
+//Day 5 - Exercise 2.3 - Hanoi Towers
+
+println(towersOfHanoi(5));
+
+int towersOfHanoi(int m){
+	if (m==1){
+		return 1;
+	}
+	else if(m==2){
+		return 3;
+	}
+	else{
+		return towersOfHanoi(m-1)+ 1 + towersOfHanoi(m-1);
+	}
+}

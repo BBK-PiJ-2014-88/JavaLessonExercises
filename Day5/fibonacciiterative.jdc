@@ -1,0 +1,26 @@
+//Day 5 - Exercise 2.2b - Fibonacci Iterative
+
+
+println(fibonacciIterative(10));
+
+int fibonacciIterative(int num){
+	int position = 3;
+	int total = 2;
+	int firstnum = 1;
+	int secondnum = 1;
+	if (num==0){
+		return 0;
+	}
+	if (num<3){
+		return 1;
+	}
+	else{
+		while(position<num){
+			firstnum = secondnum;
+			secondnum = total;
+			total = firstnum + secondnum;
+			position++;
+		}
+	}
+	return total;
+}

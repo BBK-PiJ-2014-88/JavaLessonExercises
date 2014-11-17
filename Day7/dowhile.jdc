@@ -1,0 +1,6 @@
+public class listOfMarks{
+	public void readMarks(){
+		System.out.println("Please enter the marks one after another. End with -1");
+	}
+
+}
