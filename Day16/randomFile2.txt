@@ -1,0 +1,4 @@
+This is randomFile2
+Congratulations
+You have been able to open a series of files
+Hurray!
