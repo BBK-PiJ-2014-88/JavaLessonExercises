@@ -1,3 +1,3 @@
-public interface Predicate{
-	public boolean stringMethod(String str1);
+public interface Predicate<T>{
+	public boolean stringMethod(T element1);
 }

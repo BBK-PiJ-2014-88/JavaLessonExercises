@@ -17,12 +17,12 @@ public class QuestionFive{
 
 
 	}
-	public static List<String> allMatches(List<String> inputList, Predicate lambda){
-		List<String> input = inputList;
-		List<String> result = new ArrayList<String>();
-		for (String string : inputList){
-			if (lambda.stringMethod(string)){
-				result.add(string);
+	public static <T> List<T> allMatches(List<T> inputList, Predicate<T> lambda){
+		List<T> input = inputList;
+		List<T> result = new ArrayList<T>();
+		for (T element : inputList){
+			if (lambda.stringMethod(element)){
+				result.add(element);
 			}
 		}
 		return result;
