@@ -1,4 +1,5 @@
-@FunctionalInterface  //must contain only 1 non-default method
+
+/* Functional Interface*/
 public interface TwoStringPredicate{
-	boolean func(String s, String b);
+	public boolean isBetter(String str1, String str2);
 }
