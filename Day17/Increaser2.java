@@ -1,15 +1,15 @@
 public class Increaser2 implements Runnable {
 	private Counter c;
-	static Object obj = new Object();  //using a static object so all objects will have the same one makes it work
+	private static Object obj = new Object(); //must be static so each thread can access the same one, not one each
 
-	public Increaser(Counter counter) {
+	public Increaser2(Counter counter) {
 		this.c = counter;
 	}
 
 	public static void main(String args[]) {
 		Counter counter = new Counter();
 		for (int i = 0; i < 100; i++) {
-			Increaser increaserTask = new Increaser(counter);
+			Increaser2 increaserTask = new Increaser2(counter);
 			Thread t = new Thread(increaserTask);
 			t.start();
 		}

@@ -6,7 +6,7 @@ public class Increaser implements Runnable {
 	}
 
 	public static void main(String args[]) {
-		Counter counter = new Counter();
+		Counter counter = new Counter(); //the main method is only run the first time. so there is 1 counter object
 		for (int i = 0; i < 100; i++) {
 			Increaser increaserTask = new Increaser(counter);
 			Thread t = new Thread(increaserTask);
@@ -15,7 +15,7 @@ public class Increaser implements Runnable {
 	}
 
 	public void run() {
-		synchronized (c){    //why does this work with c but not object?
+		synchronized (c){
 			System.out.println("Starting at " + c.getCount());
 			for (int i = 0; i < 1000; i++) {
 				c.increase();
