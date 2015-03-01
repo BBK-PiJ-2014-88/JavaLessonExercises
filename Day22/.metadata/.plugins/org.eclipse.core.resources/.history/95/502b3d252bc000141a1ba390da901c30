@@ -1,0 +1,15 @@
+package exercises;
+
+import java.util.Arrays;
+import java.util.List;
+
+
+public class QuestionOne{
+	public static void main(String[] args){
+		new QuestionOne().launch();
+	}
+	public void launch(){
+		List<String> words = Arrays.asList("Hello", "Bonjour", "Hurray", "What", "Dog");
+		words.stream().forEach((str) -> System.out.println("  " + str));
+	}
+}
