@@ -1,0 +1,14 @@
+package networking;
+
+import java.net.Socket;
+
+
+public class NetworkingPractice{
+	public static void main(String[] args){
+		NetworkingPractice launcher = new NetworkingPractice();
+		launcher.launch();
+	}
+	public void launch(){
+		Socket socket = new Socket("78.46.84.171", 80);
+	}
+}

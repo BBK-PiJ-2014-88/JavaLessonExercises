@@ -1,0 +1,16 @@
+package networking;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+
+public class NetworkingPractice{
+	public static void main(String[] args){
+		NetworkingPractice launcher = new NetworkingPractice();
+		launcher.launch();
+	}
+	public void launch() throws UnknownHostException, IOException{
+		Socket socket = new Socket("78.46.84.171", 80);
+	}
+}

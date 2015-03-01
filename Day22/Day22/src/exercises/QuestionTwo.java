@@ -10,6 +10,9 @@ public class QuestionTwo{
 	}
 	public void launch(){
 		List<String> words = Arrays.asList("Hello", "Bonjour", "Hurray", "What", "Dog");
-		words.stream().forEach((str) -> System.out.println("  " + str));
+		words.stream().forEach(QuestionTwo::printMethod);
+	}
+	static void printMethod(String str){
+		System.out.println(str);
 	}
 }

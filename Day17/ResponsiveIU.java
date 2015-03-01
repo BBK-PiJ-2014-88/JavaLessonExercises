@@ -9,7 +9,7 @@ public class ResponsiveIU{
 			System.out.println("Enter the duration (in ms) of task " + x + ":");
 			int miliseconds = Integer.parseInt(System.console().readLine());
 
-			for (int y = 1; y <11; y++){
+			for (int y = 1; y <11; y++){ //nested - check after each user input
 				if (completedTasks[y] != 0){
 					System.out.println("Finished Tasks: " + completedTasks[y]);
 					completedTasks[y] = 0;

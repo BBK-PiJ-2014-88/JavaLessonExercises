@@ -1,6 +1,7 @@
 public class meanNumbers{
 	private double total = 0;
 	private int count;
+	private int divisor;
 	boolean valid = false;
 	public static void main(String[] args){
 		meanNumbers tester = new meanNumbers();
@@ -11,6 +12,7 @@ public class meanNumbers{
 			try{
 				System.out.println("Please input how many numbers you would like to enter: ");
 				count = Integer.parseInt(System.console().readLine());
+				divisor = count;
 				valid = true;
 			}
 			catch(NumberFormatException ex){
@@ -26,7 +28,7 @@ public class meanNumbers{
 				System.out.println("Please enter a valid number");
 			}
 		}
-		System.out.println("Average of the inputted numbers: " + total / 10);
+		System.out.println("Average of the inputted numbers: " + total / divisor );
 	}
 
 	public void inputNumbers(){
