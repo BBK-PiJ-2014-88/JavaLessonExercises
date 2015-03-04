@@ -20,14 +20,14 @@ public class QuestionFive {
 			System.out.println(containsQ.get());
 		}		
 	
-		Optional<String> containsE2 = words.stream().map(s -> s.toUpperCase()).filter(s -> s.length() < 4).filter(s -> s.contains("e")).findFirst();
+		Optional<String> containsE2 = words.stream().map(s -> s.toUpperCase()).filter(s -> s.length() < 4).filter(s -> s.contains("E")).findFirst();
 		if (containsE2.isPresent()){
 			System.out.println(containsE2.get());
 		}
-		Optional<String> containsQ2 = words.stream().map(s -> s.toUpperCase()).filter(s -> s.length() < 4).filter(s -> s.contains("q")).findFirst();
+		Optional<String> containsQ2 = words.stream().map(s -> s.toUpperCase()).filter(s -> s.length() < 4).filter(s -> s.contains("Q")).findFirst();
 		if (containsQ2.isPresent()){
 			System.out.println(containsQ2.get());
-		}		//not working as expected. don't know how to keep track of what is changed to uppercase
+		}		//now working. was searching for e and q, needed to search for E and Q as words are all now uppercase
 		
 
 	}

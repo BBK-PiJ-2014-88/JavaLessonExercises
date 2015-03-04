@@ -1,0 +1,19 @@
+package exercises;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+public class QuestionEight {
+	public static void main(String[] args) {
+		new QuestionEight().launch();
+	}
+	public void launch(){
+		List<String> words = Arrays.asList("Hello", "Bonjour", "engine", "Hurray", "What", "Dog", "boat", "Egg", "Queen", "Soq", "Eet");
+		Optional<String> result = words.stream().map(str -> str.toUpperCase()).reduce((a,b) -> a + b);
+		if (result.isPresent()){
+			System.out.println(result.get());
+		}
+		//or could add identity value and turn straight into String
+	}
+}
