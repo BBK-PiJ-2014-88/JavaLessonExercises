@@ -15,6 +15,7 @@ public class QuestionEight {
 			System.out.println(result.get());
 		}
 		//or could add identity value and turn straight into String
-		
+		String result2 = words.stream().map(str -> str.toUpperCase()).reduce("", (a,b) -> a + b);
+		System.out.println(result2);
 	}
 }

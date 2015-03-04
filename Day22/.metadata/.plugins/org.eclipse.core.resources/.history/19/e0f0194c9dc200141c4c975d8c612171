@@ -1,0 +1,12 @@
+package exercises;
+
+//computing the sum of some ints
+public class QuestionTwelve {
+	public static void main(String[] args) {
+		new QuestionTwelve().launch();
+	}
+	public void launch(){
+		int[] ints = {2,4,6,32,34,5,43};
+	}
+
+}

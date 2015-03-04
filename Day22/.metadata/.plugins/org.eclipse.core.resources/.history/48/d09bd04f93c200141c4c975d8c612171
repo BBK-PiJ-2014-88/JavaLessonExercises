@@ -1,0 +1,16 @@
+package exercises;
+
+import java.util.List;
+public class QuestionTen {
+	public static void main(String[] args) {
+		new QuestionTen().launch();
+	}
+	
+	public static List<String> randomNumberStringGenerator(int sizeOfList){
+		
+	}
+	
+	public void launch(){
+		
+	}
+}

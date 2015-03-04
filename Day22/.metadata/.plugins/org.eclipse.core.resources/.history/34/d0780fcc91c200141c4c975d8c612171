@@ -1,0 +1,10 @@
+package exercises;
+
+public class QuestionTen {
+	public static void main(String[] args) {
+		new QuestionTen().launch();
+	}
+	public void launch(){
+		
+	}
+}

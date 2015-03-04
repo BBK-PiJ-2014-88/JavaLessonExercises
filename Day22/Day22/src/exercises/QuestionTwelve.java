@@ -1,0 +1,24 @@
+package exercises;
+
+import java.util.Arrays;
+import java.util.stream.Stream;
+//computing the sum of some ints
+public class QuestionTwelve {
+	public static void main(String[] args) {
+		new QuestionTwelve().launch();
+	}
+	public void launch(){
+		Integer[] ints = {2,4,6,20, 100, 47};  //sum = 179
+		int sum = Arrays.stream(ints).reduce(0, Integer::sum);
+		System.out.println(sum);
+		//method 2 
+		int sum2 = Arrays.stream(ints).reduce(Integer::sum).get();
+		System.out.println(sum2);
+		//can't hava primitive in optional
+		//method 3
+		int[] nums = {2,4,6,5}; //sum = 17
+		int sum3 = Arrays.stream(nums).sum();
+		System.out.println(sum3);
+	}
+
+}

@@ -1,0 +1,22 @@
+package exercises;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+public class QuestionSix {
+	public static void main(String[] args) {
+		new QuestionSix().launch();
+	}
+	public void launch(){
+		List<String> words = Arrays.asList("Hello", "Bonjour", "engine", "Hurray", "What", "Dog", "boat", "Egg", "Queen", "Soq", "Eet");
+		Optional<String> containsE2 = words.stream().map(s -> s.toUpperCase()).filter(s -> s.length() < 4).filter(s -> s.contains("E")).findFirst();
+		if (containsE2.isPresent()){
+			System.out.println(containsE2.get());
+		}
+		Optional<String> containsQ2 = words.stream().map(s -> s.toUpperCase()).filter(s -> s.length() < 4).filter(s -> s.contains("Q")).findFirst();
+		if (containsQ2.isPresent()){
+			System.out.println(containsQ2.get());
+		}
+	}
+}
